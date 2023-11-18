@@ -15,7 +15,7 @@ type myInvoicerServer struct {
 
 func (s *myInvoicerServer) Create(ctx context.Context, req *Invoicer.CreateRequest) (*Invoicer.CreateResponse, error) {
 	return &Invoicer.CreateResponse{
-		Pdf:  []byte("test"),
+		Pdf:  []byte(req.From),
 		Docx: []byte("test"),
 	}, nil
 }
